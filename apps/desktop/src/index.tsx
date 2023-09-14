@@ -1,13 +1,13 @@
-// WARNING: Import order is important in this file. Make sure ~/patches comes before App.
+import { SpacedriveInterface } from '@sd/interface';
 import { StrictMode, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
 	<StrictMode>
 		<Suspense>
-			<App />
+			<h1>Root</h1>
+			<SpacedriveInterface />
 		</Suspense>
 	</StrictMode>
 );
