@@ -6,7 +6,9 @@
 	"main": "index.tsx",
 	"types": "index.tsx",
 	"exports": {
-		".": "./index.tsx"
+		".": "./index.tsx",
+		"./app": "./app/index.tsx",
+		"./util/Platform": "./util/Platform.tsx"
 	},
 	"scripts": {
 		"lint": "eslint . --cache",
