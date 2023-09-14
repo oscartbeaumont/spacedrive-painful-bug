@@ -4,31 +4,7 @@ export type OperatingSystem = 'browser' | 'linux' | 'macOS' | 'windows' | 'unkno
 
 // Platform represents the underlying native layer the app is running on.
 // This could be Tauri or web.
-export type Platform = {
-	platform: 'web' | 'tauri'; // This represents the specific platform implementation
-	getThumbnailUrlByThumbKey: (thumbKey: string[]) => string;
-	getFileUrl: (libraryId: string, locationLocalId: number, filePathId: number) => string;
-	openLink: (url: string) => void;
-	// Tauri patches `window.confirm` to return `Promise` not `bool`
-	confirm(msg: string, cb: (result: boolean) => void): void;
-	getOs?(): Promise<OperatingSystem>;
-	openDirectoryPickerDialog?(): Promise<null | string | string[]>;
-	openFilePickerDialog?(): Promise<null | string | string[]>;
-	saveFilePickerDialog?(opts?: { title?: string; defaultPath?: string }): Promise<string | null>;
-	showDevtools?(): void;
-	openPath?(path: string): void;
-	openLogsDir?(): void;
-	userHomeDir?(): Promise<string>;
-	// Opens a file path with a given ID
-	openFilePaths?(library: string, ids: number[]): any;
-	revealItems?(
-		library: string,
-		items: ({ Location: { id: number } } | { FilePath: { id: number } })[]
-	): Promise<unknown>;
-	getFilePathOpenWithApps?(library: string, ids: number[]): Promise<unknown>;
-	openFilePathWith?(library: string, fileIdsAndAppUrls: [number, string][]): Promise<unknown>;
-	lockAppTheme?(themeType: 'Auto' | 'Light' | 'Dark'): any;
-};
+export type Platform = string;
 
 // Keep this private and use through helpers below
 const context = createContext<Platform>(undefined!);
