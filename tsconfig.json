@@ -6,12 +6,6 @@
 		},
 		{
 			"path": "interface"
-		},
-		{
-			"path": "packages/client"
-		},
-		{
-			"path": "packages/ui"
 		}
 	]
 }
