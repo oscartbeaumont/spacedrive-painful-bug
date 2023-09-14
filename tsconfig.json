@@ -1,0 +1,17 @@
+{
+	"files": [],
+	"references": [
+		{
+			"path": "apps/desktop"
+		},
+		{
+			"path": "interface"
+		},
+		{
+			"path": "packages/client"
+		},
+		{
+			"path": "packages/ui"
+		}
+	]
+}

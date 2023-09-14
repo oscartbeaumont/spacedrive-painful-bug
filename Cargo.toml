@@ -1,0 +1,10 @@
+[workspace]
+resolver = "2"
+members = [
+	"apps/desktop/src-tauri",
+]
+
+[workspace.package]
+license = "AGPL-3.0-only"
+edition = "2021"
+repository = "https://github.com/spacedriveapp/spacedrive"
