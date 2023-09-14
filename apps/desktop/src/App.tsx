@@ -8,11 +8,12 @@ import {
 	OperatingSystem,
 	Platform,
 	PlatformProvider,
-	routes,
+	routes, // TODO: This does not
 	SpacedriveInterface,
-	TestPlatformProvider,
-	useHasPlatformProvider
+	TestPlatformProvider
 } from '@sd/interface';
+
+// import { routes } from './demo'; // TODO: This works
 
 import * as commands from './commands';
 import demoData from './demoData.json';
